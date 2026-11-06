@@ -1,0 +1,46 @@
+:root{--pri:#1f4e79;--pri2:#163a5a;--acc:#e8590c;--bg:#f3f6f9;--ink:#1b2430;--mute:#66727f;--line:#dde4eb;--ok:#1b8a4b;--few:#b97a00;--bad:#b3342f}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--pri)}button,input,select,textarea{font:inherit}
+header{background:var(--pri);color:#fff;position:sticky;top:0;z-index:30}
+.bar{max-width:1180px;margin:auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:21px;color:#fff;text-decoration:none}.logo span{color:#ffc078}
+.bar nav{margin-left:auto;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.nl{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px;background:none;border:0;cursor:pointer}
+.nl:hover{background:#ffffff26}
+.bell b{background:var(--acc);border-radius:99px;padding:0 6px;font-size:12px;margin-left:4px}
+#net{background:var(--bad);color:#fff;text-align:center;padding:6px 10px;display:none}
+.hero{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;padding:28px 16px 70px}
+.hero h1,.hero p{max-width:1180px;margin:0 auto 4px}.hero h1{font-size:clamp(22px,4vw,32px)}
+.wrap{max-width:1180px;margin:auto;padding:0 16px}
+.search{background:#fff;border-radius:12px;box-shadow:0 6px 20px #0002;padding:14px;margin:-48px 0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;align-items:end}
+label{font-size:12px;font-weight:600;color:var(--mute);display:block}
+input,select,textarea{width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+[aria-invalid]{border-color:var(--bad)}
+.err{color:var(--bad);font-size:13px;margin-top:2px}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:9px 14px;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block}
+.btn.sec{background:#fff;color:var(--pri);border:1px solid var(--pri)}.btn.bad{background:var(--bad)}.btn.sm{padding:5px 10px;font-size:13px}
+.layout{display:grid;grid-template-columns:250px 1fr;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.item{display:grid;grid-template-columns:150px 1fr auto;gap:14px}
+.ph{border-radius:10px;min-height:120px;display:grid;place-items:center;color:#fff;font-size:34px;font-weight:700}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12px;font-weight:700;color:#fff}
+.ok{background:var(--ok)}.few{background:var(--few)}.full{background:var(--bad)}.gray{background:var(--mute)}
+.price{text-align:right}.price b{font-size:20px;color:var(--acc)}
+.mute{color:var(--mute);font-size:13px}
+.skel{height:120px;border-radius:12px;margin-bottom:12px;background:linear-gradient(90deg,#e8edf2 25%,#f6f8fa 50%,#e8edf2 75%);background-size:200% 100%;animation:sh 1.2s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:8px 0}
+.prog i{display:block;height:100%;width:5%;background:var(--pri);animation:pg 5s linear forwards}
+@keyframes pg{to{width:92%}}
+.state{text-align:center;padding:30px 12px}.state h3{margin:6px 0}.state .big{font-size:40px}
+#map{height:300px;border-radius:12px;margin-bottom:12px;display:none}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g2 .f{grid-column:1/-1}
+dialog{border:0;border-radius:14px;padding:0;width:min(720px,94vw);max-height:90vh;color:var(--ink)}
+dialog::backdrop{background:#0007}
+.dl{padding:18px;overflow:auto;max-height:90vh}.x{float:right}
+.msg{padding:6px 10px;border-radius:10px;margin:4px 0;max-width:85%;background:var(--bg)}.msg.me{background:#dbe9f6;margin-left:auto}
+#ai{position:fixed;right:14px;bottom:14px;z-index:25;box-shadow:0 4px 14px #0003}
+#toast{position:fixed;left:50%;bottom:70px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:8px;display:none;z-index:50}
+footer{padding:24px 0 70px;color:var(--mute);font-size:13px}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.item{grid-template-columns:1fr}.price{text-align:left}.ph{min-height:64px}.g2{grid-template-columns:1fr}}
